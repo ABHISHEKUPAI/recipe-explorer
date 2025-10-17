@@ -37,6 +37,8 @@ header input {
   gap: 20px;
   padding: 30px;
   flex-grow: 1;
+  align-items: start;
+  
 }
 
 .recipe-card {
