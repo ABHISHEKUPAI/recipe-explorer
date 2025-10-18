@@ -68,6 +68,7 @@ function displayRecipes(list) {
 function handleSearch() {
   const query = searchInput.value; 
   if (query.trim() === "") {
+  displayRecipes(recipes);
   return;
   }
   const filtered = recipes.filter((r) =>
