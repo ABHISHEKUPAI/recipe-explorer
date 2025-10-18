@@ -42,6 +42,19 @@ const searchInput = document.getElementById("searchInput");
 
 function displayRecipes(list) {
   container.innerHTML = "";
+  if (list.length === 0) {
+    const message = document.createElement("p");
+    message.textContent = "No recipes found ";
+    message.style.textAlign = "center";
+    message.style.fontSize = "2rem";
+    message.style.fontWeight = "bold";     
+    message.style.color = "#000000";      
+    message.style.marginTop = "20px";
+    message.style.marginTop = "20px";
+
+    container.appendChild(message);
+    return;
+  }
   list.forEach((recipe) => {
     const card = document.createElement("div");
     card.classList.add("recipe-card");
