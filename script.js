@@ -66,12 +66,12 @@ function displayRecipes(list) {
 }
 
 function handleSearch() {
-  const query = searchInput.value; 
+  const query = searchInput.value.toLowerCase();
   if (query.trim() === "") {
   return;
   }
   const filtered = recipes.filter((r) =>
-    r.name.includes(query) 
+    r.name.toLowerCase().includes(query) 
   );
   displayRecipes(filtered);
 }
